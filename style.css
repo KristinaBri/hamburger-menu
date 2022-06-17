@@ -10,7 +10,8 @@ html {
 }
 
 .nav {
-    background-color: rgba(84, 209, 122, 0.268);
+    /* overflow: hidden; */
+    background-color: rgb(156, 217, 174);
     text-align: right;
     height: 70px;
     line-height: 70px;
@@ -27,6 +28,10 @@ i {
     cursor: pointer;
 }
 
+i:hover {
+    color: rgb(0, 128, 0);
+}
+
 
 .menu {
     margin: 0 30px 0 0;
@@ -41,6 +46,12 @@ i {
     font-weight: bold;
 }
 
+.menu a:hover {
+    color: rgb(0, 128, 0);
+    font-weight: 800;
+    letter-spacing: 8px;
+}
+
 label {
     margin: 0 40px 0 0;
     font-size: 26px;
@@ -48,19 +59,28 @@ label {
     display: none;
     width: 25px;
     float: right;
-    color: rgb(79, 79, 79);
+    color: rgb(65, 109, 78);
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
 
 #toggle {
     display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
     label {
         display: block;
         cursor: pointer;
+    } 
+    label:hover {
+        color: rgb(0, 128, 0);
+        font-weight: 800;
     }
     .menu {
         text-align: center;
@@ -69,28 +89,44 @@ label {
     }
     .menu a {
         display: block;
-        border-bottom: 1px solid rgb(234, 234, 235);
+        border-bottom: 2px solid rgb(234, 234, 235);
         margin: 0;
+        background-color: rgb(156, 217, 174);
+    }
+    .menu a:first-child {
         padding-top: 70px;
     }
     #toggle:checked + .menu {
         display: block;
     }
+    
+
+   
 }
 
 .images {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 figure {
-    border: 2px solid rgb(128, 128, 128);
-    border-radius: 10px;
     text-align: center;
+    padding: 35px;
+    margin: 10px;
 }
 
-img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+
+h1 {
+    margin-top: 70px;
+    margin-left: 25px;
+    color: rgb(79, 79, 79);
 }
+
+p {
+    margin: 0 25px;
+    color: rgb(79, 79, 79);
+    line-height: 1.5rem;
+   
+}
+
